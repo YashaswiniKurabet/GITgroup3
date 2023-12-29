@@ -3,5 +3,5 @@ void main()
 {
 int x=5;
 int y=3;
-printf("Subtraction:%d", x+y);
+printf("Subtraction:%d", x-y);
 }
