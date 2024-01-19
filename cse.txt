@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 hiiiiii
+=======
+class Shapes{
+public static void main(String[] args){
+double area;
+double x,y;
+>>>>>>> 0ae8c2f15c493823ec61ec8cc8ddf525bb44a3b4
