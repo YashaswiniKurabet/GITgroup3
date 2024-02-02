@@ -1,0 +1,6 @@
+hi#include<stdio.h>
+void main()
+int a=34;
+int b=24;
+result=a+b;
+printf("Sum=%d",result);

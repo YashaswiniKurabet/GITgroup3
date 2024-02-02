@@ -1,0 +1,4 @@
+class Shapes{
+public static void main(String[] args){
+double area;
+double x,y;
