@@ -1,4 +1,8 @@
-hi#include<stdio.h>
+
+#include<stdio.h>
+
+#include<stdio.h>
+
 void main()
 int a=34;
 int b=24;

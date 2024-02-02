@@ -1,10 +1,10 @@
 Class Main{
 public static void main(String[] args){
-int x=6;
-int y=7;
+int x=3;
+int y=4;
 }
 System.out.println("add");
 {
-return x*y;
+return x+y;
 }
 

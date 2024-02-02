@@ -5,4 +5,4 @@ int x=5;
 int y=3;
 printf("Subtraction:%d", x+y);
 }
-ff
+
