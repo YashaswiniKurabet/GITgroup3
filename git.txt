@@ -1,3 +1,4 @@
 class Shapes{
 int main();
 psvm{
+class triangle
