@@ -1,0 +1,429 @@
+$ cd CS192
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$  git checkout cs192a
+Switched to branch 'cs192a'
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (cs192a)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+user.name=YashaswiniKurabet
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (cs192a)
+$ git remote origin
+error: unknown subcommand: `origin'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --[no-]verbose    be verbose; must be placed before a subcommand
+
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (cs192a)
+$ git config --global user.email "kurabetjayashree@gmail.com"
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (cs192a)
+$ git config --local user.name "YashaswiniKurabet"
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (cs192a)
+$ git remote add origin https://github.com/YashaswiniKurabet/GITgroup3.git
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (cs192a)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=kurabetjayashree@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+user.name=YashaswiniKurabet
+remote.origin.url=https://github.com/YashaswiniKurabet/GITgroup3.git
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (cs192a)
+$ git checkout master
+Switched to branch 'master'
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ ls
+ 181a.txt      192.c          add.txt   frifeb.txt   y1.c
+ 189.txt      '8th exp.txt'   cse.txt   git.txt      yashu.text
+ 189.txt.txt   GITgroup3/     feb.txt   sub.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git fetch origin master
+From https://github.com/YashaswiniKurabet/GITgroup3
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git pull origin master
+From https://github.com/YashaswiniKurabet/GITgroup3
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git log --author="YashaswiniKurabet" --since="2023-12-15" --until="2024-02-02"
+commit ac87fb56bbd2a62902fca82844160e91200aa890 (feature-branch)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 09:44:20 2024 +0530
+
+    group3 file
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git fetch origin feature-branch
+From https://github.com/YashaswiniKurabet/GITgroup3
+ * branch            feature-branch -> FETCH_HEAD
+ * [new branch]      feature-branch -> origin/feature-branch
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git pull origin feature-branch
+From https://github.com/YashaswiniKurabet/GITgroup3
+ * branch            feature-branch -> FETCH_HEAD
+Already up to date.
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git log --author="YashaswiniKurabet" --since="2023-12-15" --until="2024-02-02"
+commit ac87fb56bbd2a62902fca82844160e91200aa890 (origin/feature-branch, feature-branch)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 09:44:20 2024 +0530
+
+    group3 file
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ GIT_PAGER= git log --author="YashaswiniKurabet" --since="2023-12-15" --until="2024-02-02"
+commit e4ef8f81a19191722d4e44a78eb16dea1094bd07
+Merge: ac87fb5 5ee74b1
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:13:44 2024 +0530
+
+    file
+
+commit ac87fb56bbd2a62902fca82844160e91200aa890 (origin/feature-branch, feature-branch)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 09:44:20 2024 +0530
+
+    group3 file
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git log
+commit 0b7fe65d50161745360069b73283093a90007ff4 (HEAD -> master, tag: b7437bc1696aecd4efe9aa9114919e8425d99a55)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:52:06 2024 +0530
+
+    fourth commit
+
+commit ba88a2055f441adbfb51aed1d343ce85daf7c0ae (tag: 192CS.0)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:50:53 2024 +0530
+
+    third commit
+
+commit b7437bc1696aecd4efe9aa9114919e8425d99a55 (tag: 192c2.0, dior)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:49:47 2024 +0530
+
+    second commit
+
+commit 747d2e6d716519eb00cbe67b89904dbe83a08336
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:48:32 2024 +0530
+
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git log --author="SumedhaSulibhavi" --since="2023-12-15" --until="2024-02-02" commit 0ae8c2f15c493823ec61ec8cc8ddf525bb44a3b4
+Author: SumedhaSulibhavi <numan.n.patil@gmail.com>
+Date:   Fri Jan 19 10:49:24 2024 +0530
+
+    Java file
+
+commit 8bd54564bbb18fb4fd58f631c3131f75514570c7
+Author: SumedhaSulibhavi <numan.n.patil@gmail.com>
+Date:   Fri Jan 19 10:09:40 2024 +0530
+
+    modified
+
+commit caab3be5e6cbb688e7026fd3b360fb6a66b3f052
+Merge: 8af3940 8d38f1a
+Author: SumedhaSulibhavi <numan.n.patil@gmail.com>
+Date:   Fri Dec 29 10:50:40 2023 +0530
+
+    hiMerge branch 'cs181'
+
+commit 8d38f1ab26dd45c1a0cf733cbfa31cf38f7547eb
+Author: SumedhaSulibhavi <numan.n.patil@gmail.com>
+Date:   Fri Dec 29 10:49:39 2023 +0530
+
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ GIT_PAGER= git log -n 5
+commit 0b7fe65d50161745360069b73283093a90007ff4 (HEAD -> master, tag: b7437bc1696aecd4efe9aa9114919e8425d99a55)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:52:06 2024 +0530
+
+    fourth commit
+
+commit ba88a2055f441adbfb51aed1d343ce85daf7c0ae (tag: 192CS.0)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:50:53 2024 +0530
+
+commit b7437bc1696aecd4efe9aa9114919e8425d99a55 (tag: 192c2.0, dior)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:49:47 2024 +0530
+
+    second commit
+
+commit 747d2e6d716519eb00cbe67b89904dbe83a08336
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:48:32 2024 +0530
+
+    first commit
+
+commit 711ba999992b31fbaac33776e0ae389c6034be77 (origin/master)
+Merge: e4ef8f8 77cc22b
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:19:45 2024 +0530
+
+    filedone
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ ls
+ 181a.txt      192.c          add.txt   frifeb.txt   y1.c
+ 189.txt      '8th exp.txt'   cse.txt   git.txt      yashu.text
+ 189.txt.txt   GITgroup3/     feb.txt   sub.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ nano yashu.text
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git add .
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git commit -m "latest change"
+[master ad8bd9e] latest change
+ 2 files changed, 235 insertions(+), 1 deletion(-)
+ create mode 100644 8th exp.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ nano yashu.text
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git log
+commit ad8bd9e4aa5809f4f5db33f7346f660d71f02e8d (HEAD -> master)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 23 10:30:26 2024 +0530
+
+    latest change
+
+commit 0b7fe65d50161745360069b73283093a90007ff4 (tag: b7437bc1696aecd4efe9aa9114919e8425d99a55)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:52:06 2024 +0530
+
+    fourth commit
+
+commit ba88a2055f441adbfb51aed1d343ce85daf7c0ae (tag: 192CS.0)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:50:53 2024 +0530
+
+    third commit
+
+commit b7437bc1696aecd4efe9aa9114919e8425d99a55 (tag: 192c2.0, dior)
+Author: YashaswiniKurabet <kurabetjayashree@gmail.com>
+Date:   Fri Feb 2 10:49:47 2024 +0530
+
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git revert ad8bd9e4aa5809f4f5db33f7346f660d71f02e8d
+[master b40d01e] undo :Revert "latest change"
+ 2 files changed, 1 insertion(+), 235 deletions(-)
+ delete mode 100644 8th exp.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ nano yashu.text
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git branch 192yk
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git branch
+  192yk
+  c2
+  cs192a
+  cs192b
+  dior
+  dior1
+  feature-branch
+* master
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (master)
+$ git checkout 192yk
+Switched to branch '192yk'
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (192yk)
+$ nano new.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (192yk)
+$ git add .
+warning: in the working copy of 'new.txt', LF will be replaced by CRLF the next time Git touches it
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (192yk)
+$ git commit -m "branch"
+[192yk 1fe6ded] branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (192yk)
+$ git push -u origin 192yk
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (20/20), 3.18 KiB | 3.18 MiB/s, done.
+Total 20 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+remote:
+remote: Create a pull request for '192yk' on GitHub by visiting:
+remote:      https://github.com/YashaswiniKurabet/GITgroup3/pull/new/192yk
+remote:
+To https://github.com/YashaswiniKurabet/GITgroup3.git
+ * [new branch]      192yk -> 192yk
+branch '192yk' set up to track 'origin/192yk'.
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (192yk)
+$ mkdir gityk
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192 (192yk)
+$ cd gityk
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (192yk)
+$ git init
+Initialized empty Git repository in C:/Users/BLDEA-CSE/CS192/gityk/.git/
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (master)
+$ touch y2.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (master)
+$ git add .
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (master)
+$ git commit -m "y2"
+[master (root-commit) e99de29] y2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 y2.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (master)
+$ git branch yk
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (master)
+$ git checkout yk
+Switched to branch 'yk'
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (yk)
+$ touch yk1.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (yk)
+$ git add .
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (yk)
+$ git commit -m "yk1"
+[yk dd7c511] yk1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 yk1.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (yk)
+$ touch yk2.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (yk)
+$ git add .
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (yk)
+$ git commit -m "yk2"
+[yk 6d65e5e] yk2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 yk2.txt
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (yk)
+$ git checkout master
+Switched to branch 'master'
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (master)
+$ git log
+commit e99de2918d2841f64fef0780fbcf560b56dd5bb7 (HEAD -> master)
+Author: unknown <kurabetjayashree@gmail.com>
+Date:   Fri Feb 23 11:03:50 2024 +0530
+
+    y2
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (master)
+$ git rebase yk
+Successfully rebased and updated refs/heads/master.
+
+BLDEA-CSE@DESKTOP-TDJBKD5 MINGW64 ~/CS192/gityk (master)
+$ git log
+commit 6d65e5e6511b96142c4002e7defc19124039d84c (HEAD -> master, yk)
+Author: unknown <kurabetjayashree@gmail.com>
+Date:   Fri Feb 23 11:08:07 2024 +0530
+
+    yk2
+
+commit dd7c5115b02f90ee5bfb5e3991bc74ae87b2d2c2
+Author: unknown <kurabetjayashree@gmail.com>
+Date:   Fri Feb 23 11:07:35 2024 +0530
+
+    yk1
+
+commit e99de2918d2841f64fef0780fbcf560b56dd5bb7
+Author: unknown <kurabetjayashree@gmail.com>
+Date:   Fri Feb 23 11:03:50 2024 +0530
+
+    y2
