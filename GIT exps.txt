@@ -1,0 +1,97 @@
+EXP 1
+$ cd CS192
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/ADMIN/CS192/.git/
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   project192.txt
+
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ nano project192.txt
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git config --global user.email "kurabetjayashree@gmail.com"
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git config --local user.name "YashaswiniKurabet"
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git remote add origin https://github.com/YashaswiniKurabet/GITgroup3.git
+error: remote origin already exists.
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+core.fsmonitor=true
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=kurabetjayashree@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/YashaswiniKurabet/GITgroup3.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+user.name=YashaswiniKurabet
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ nano project192.txt
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git add .
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git commit -m "project done"
+[master (root-commit) 8003d39] project done
+ 1 file changed, 52 insertions(+)
+ create mode 100644 project192.txt
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git push origin master
+To https://github.com/YashaswiniKurabet/GITgroup3.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/YashaswiniKurabet/GITgroup3.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git push origin master --force
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 720 bytes | 360.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/YashaswiniKurabet/GITgroup3.git
+ + b40d01e...8003d39 master -> master (forced update)
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$
+EXP 2
+
