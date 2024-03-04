@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+public class UPIManager {
+ private String upiID1;
+ private double balance1;
+ private String upiID2;
+ private double balance2;
+ private List<String> transactions;
+ public UPIManager() {
+ upiID1 = "";
+ balance1 = 0.0;
+ upiID2 = "";
+ balance2 = 0.0;
+ transactions = new ArrayList<>();
+ }
+ public void addAccount(String upiID, double balance) {
+ if (upiID1.isEmpty()) {
+ upiID1 = upiID;
+ balance1 = balance;
+ System.out.println("Account added successfully!");
+ } else if (upiID2.isEmpty()) {
+ upiID2 = upiID;
+ balance2 = balance;
+ System.out.println("Account added successfully!");
+ } else {
+ System.out.println("Maximum account limit reached. 
+Cannot add more accounts.");
+ }
+ 

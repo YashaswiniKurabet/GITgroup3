@@ -93,5 +93,97 @@ To https://github.com/YashaswiniKurabet/GITgroup3.git
 
 ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
 $
-EXP 2
+EXP 3
+$ cd CS192
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git branch
+* master
+  ysk192
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ ls
+'GIT exps.txt'   example.c   file.txt   project192.txt
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git stash
+No local changes to save
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git stash
+Saved working directory and index state WIP on master: a150c1a done
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (master)
+$ git checkout ysk192
+Switched to branch 'ysk192'
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (ysk192)
+$ nano a.txt
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (ysk192)
+$ git add .
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (ysk192)
+$ git commit -m "change done"
+[ysk192 6f03596] change done
+ 1 file changed, 2 insertions(+)
+ create mode 100644 a.txt
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (ysk192)
+$ git stash apply
+On branch ysk192
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (ysk192)
+$ git stash apply
+error: Your local changes to the following files would be overwritten by merge:
+        file.txt
+Please commit your changes or stash them before you merge.
+Aborting
+On branch ysk192
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   a.txt
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (ysk192)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        a.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (ysk192)
+$ git stash apply
+error: Your local changes to the following files would be overwritten by merge:
+        file.txt
+Please commit your changes or stash them before you merge.
+Aborting
+On branch ysk192
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   a.txt
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (ysk192)
+$ git add .
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+
+ADMIN@DESKTOP-D6U9MDK MINGW64 ~/CS192 (ysk192)
+$ git commit -m "totally done"
+[ysk192 348ae8e] totally done
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
 
