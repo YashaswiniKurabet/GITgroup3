@@ -1,0 +1,52 @@
+public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ UPIManager upiManager = new UPIManager();
+ System.out.println("Welcome to UPI Manager!");
+ while (true) {
+ System.out.println("\nMenu:");
+ System.out.println("1. Add Account");
+ System.out.println("2. Check Balance");
+ System.out.println("3. Transfer");
+ System.out.println("4. Display Transactions");
+ System.out.println("5. Exit");
+ System.out.print("Choose an option: ");
+ int option = scanner.nextInt();
+ switch (option) {
+ case 1:
+ System.out.print("Enter UPI ID: ");
+ String upiID = scanner.next();
+ System.out.print("Enter initial balance: ");
+ double balance = scanner.nextDouble();
+ upiManager.addAccount(upiID, balance);
+ break;
+ case 2:
+ System.out.print("Enter UPI ID to check balance: 
+");
+ upiID = scanner.next();
+ System.out.println("Balance: " + 
+upiManager.checkBalance(upiID));
+ break;
+ case 3:
+ System.out.print("Enter sender UPI ID: ");
+ String senderUPI = scanner.next();
+ System.out.print("Enter receiver UPI ID: ");
+ String receiverUPI = scanner.next();
+ System.out.print("Enter amount to transfer: ");
+ double amount = scanner.nextDouble();
+ upiManager.transfer(senderUPI, receiverUPI, 
+amount);
+ break;
+ case 4:
+ upiManager.displayTransactions();
+ break;
+ case 5:
+ System.out.println("Exiting...");
+ scanner.close();
+ System.exit(0);
+ default:
+ System.out.println("Invalid option. Please try 
+again.");
+ }
+ }
+ }
+}
