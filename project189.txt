@@ -1,0 +1,31 @@
+public void transfer(String senderUPI, String receiverUPI, 
+double amount) {
+ if (senderUPI.equals(upiID1) && 
+receiverUPI.equals(upiID2)) {
+ if (balance1 >= amount) {
+ balance1 -= amount;
+ balance2 += amount;
+ String transactionID = generateTransactionID();
+ transactions.add(transactionID);
+ System.out.println("Transfer successful! Transaction 
+ID: " + transactionID);
+ } else {
+ System.out.println("Insufficient balance for transfer.");
+ }
+ } else if (senderUPI.equals(upiID2) && 
+receiverUPI.equals(upiID1)) {
+ if (balance2 >= amount) {
+ balance2 -= amount;
+ balance1 += amount;
+ String transactionID = generateTransactionID();
+ transactions.add(transactionID);
+ System.out.println("Transfer successful! Transaction 
+ID: " + transactionID);
+ } else {
+ System.out.println("Insufficient balance for transfer.");
+ }
+ } else {
+ System.out.println("Sender or receiver account not 
+found.");
+ }
+}
