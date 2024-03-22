@@ -1,2 +1,3 @@
 stash
 make changes
+revert latest change
